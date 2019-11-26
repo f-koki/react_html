@@ -17,11 +17,19 @@
     <h1>React</h1>
     <div id="root">wait...</div>
     <script type="text/babel">
+      let message = "新しいメッセージです";
+      let link = "https://google.com/";
+      let msg_s = {
+        fontSize: "20px",
+        color: "red",
+        border: "1px solid blue"
+      };
       let dom = document.querySelector("#root");
+
       let el = (
         <div>
-          <h2>JSX Sample</h2>
-          <p>This is a sample message</p>
+          <div style={msg_s}>{message}</div>
+          <a href={link}>googleにアクセス</a>
         </div>
       );
       ReactDOM.render(el, dom);
