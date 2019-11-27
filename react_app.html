@@ -28,12 +28,12 @@
       };
 
       function Welcome(props) {
-        return <p style={msg}>Hello React!!</p>;
+        return <p style={msg}>Hello {props.name}!!</p>;
       }
 
       let el = (
         <div>
-          <Welcome />
+          <Welcome name="taro" />
         </div>
       );
       ReactDOM.render(el, dom);
