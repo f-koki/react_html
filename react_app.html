@@ -19,21 +19,21 @@
     <script type="text/babel">
       let dom = document.querySelector("#root");
 
-      let pringMsg = function(msg, size, color) {
-        const style = {
-          fontSize: size + "pt",
-          fontWeight: "700",
-          color: color,
-          border: "1px solid" + color
-        };
-        return <p style={style}>{msg}</p>;
+      const msg = {
+        fontSize: "20px",
+        fontWeight: "bold",
+        pading: "10px",
+        color: "White",
+        backgroundColor: "darkblue"
       };
+
+      function Welcome(props) {
+        return <p style={msg}>Hello React!!</p>;
+      }
 
       let el = (
         <div>
-          {pringMsg("最初のメッセージ", 30, "#ddd")}
-          {pringMsg("2番目のメッセージ", 20, "#aaa")}
-          {pringMsg("3番目のメッセージ", 14, "#333")}
+          <Welcome />
         </div>
       );
       ReactDOM.render(el, dom);
