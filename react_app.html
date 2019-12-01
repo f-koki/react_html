@@ -23,17 +23,22 @@
         fontSize: "20px",
         fontWeight: "bold",
         pading: "10px",
-        color: "White",
-        backgroundColor: "darkblue"
+        border: "solid 5px yellow"
       };
 
-      function Welcome(props) {
-        return <p style={msg}>Hello {props.name}!!</p>;
+      class Hello extends React.Component {
+        constructor(props) {
+          super(props);
+        }
+
+        render() {
+          return <p style={msg}>Hello</p>;
+        }
       }
 
       let el = (
         <div>
-          <Welcome name="taro" />
+          <Hello />
         </div>
       );
       ReactDOM.render(el, dom);
